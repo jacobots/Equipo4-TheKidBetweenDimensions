@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5d9e0797b771846788fa0e27b8836267
-timeCreated: 1524155739
+timeCreated: 1524327664
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -93,12 +93,12 @@ TextureImporter:
       name: Dot_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 69
-        width: 18
-        height: 10
+        x: 24
+        y: 68
+        width: 27
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -107,12 +107,12 @@ TextureImporter:
       name: Dot_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 69
-        width: 17
-        height: 10
+        x: 63
+        y: 68
+        width: 28
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Dot_2
       rect:
         serializedVersion: 2
-        x: 137
-        y: 51
-        width: 31
-        height: 28
+        x: 105
+        y: 68
+        width: 27
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,12 +135,12 @@ TextureImporter:
       name: Dot_3
       rect:
         serializedVersion: 2
-        x: 191
-        y: 69
-        width: 19
-        height: 10
+        x: 147
+        y: 68
+        width: 24
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +149,12 @@ TextureImporter:
       name: Dot_4
       rect:
         serializedVersion: 2
-        x: 122
-        y: 35
-        width: 7
-        height: 5
+        x: 188
+        y: 67
+        width: 26
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: Dot_5
       rect:
         serializedVersion: 2
-        x: 129
-        y: 27
-        width: 35
-        height: 17
+        x: 228
+        y: 66
+        width: 29
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: Dot_6
       rect:
         serializedVersion: 2
-        x: 108
-        y: 52
-        width: 18
-        height: 27
+        x: 26
+        y: 29
+        width: 24
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Dot_7
       rect:
         serializedVersion: 2
-        x: 233
-        y: 69
-        width: 19
-        height: 10
+        x: 63
+        y: 29
+        width: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Dot_8
       rect:
         serializedVersion: 2
-        x: 28
-        y: 34
-        width: 19
-        height: 12
+        x: 108
+        y: 28
+        width: 25
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: Dot_9
       rect:
         serializedVersion: 2
-        x: 66
-        y: 30
-        width: 30
-        height: 15
+        x: 150
+        y: 23
+        width: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
