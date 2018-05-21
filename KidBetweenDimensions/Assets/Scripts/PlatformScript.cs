@@ -15,6 +15,7 @@ public class PlatformScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -22,6 +23,10 @@ public class PlatformScript : MonoBehaviour {
 		anim.SetBool ("Destroy", true);
 
 
+	}
+
+	void OnTriggerExit2D(Collider2D other){
+		anim.SetBool ("Destroy", false);
 	}
 
 
