@@ -10,6 +10,12 @@ public class PlayerPlatformerController : PhysicsObject {
 	private Animator animator;
 	List<Collider2D> inColliders=new List<Collider2D>();
 
+	public bool dashIsActive = false;
+	public float dashDistance = 10;
+	public float dashSpeed = 0.2f;
+	public float dashInitPosition = 0;
+	public float dashEndPosition = 0;
+
 
 	// Use this for initialization
 	void Awake () {
@@ -39,6 +45,8 @@ public class PlayerPlatformerController : PhysicsObject {
 		}
 
 
+
+
 		if (move.x != 0) {
 			
 			if (move.x > 0) {
@@ -65,19 +73,65 @@ public class PlayerPlatformerController : PhysicsObject {
 		if (Input.GetButtonDown ("Fire1"))
 			inColliders.ForEach (n => n.SendMessage ("Use", SendMessageOptions.DontRequireReceiver));
 
+		// Dash
+		  /*if(Input.GetKeyDown(KeyCode.C)) {
+
+			// Activamos el movimiento automaticoa
+			dashIsActive = true;
+
+			// Guardamos la posicion inicial del dash
+			dashInitPosition = this.gameObject.transform.position.x;
+
+			if (faceDirection == true) {
+
+				// Calculamos la distancia a recorrer automaticamente
+				dashEndPosition = dashInitPosition + dashDistance;
+			} else {
+				dashEndPosition = dashInitPosition - dashDistance;
+			}
+		}
+
+		if(dashIsActive == true) {
+
+			// Hacemos el movimiento continuo del dash mientras no hayamos llegado al final
+			if (this.gameObject.transform.position.x < dashEndPosition) {
+
+				if (faceDirection == true) {
+					this.gameObject.transform.Translate (dashSpeed, 0.0f, 0.0f);
+				} else {
+					this.gameObject.transform.Translate (-dashSpeed, 0.0f, 0.0f);
+				}
+
+			
+			} else {
+
+				// desactivamos el movimiento automaticoa
+				dashIsActive = false;
+
+			}
+		}
 
 	}
 
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		inColliders.Add (col);
-	}
 
-	void OnTriggerExit2D(Collider2D col)
-	{
-		inColliders.Remove (col);
+	void OnCollisonEnter2D() {
+		if(dashIsActive == true) {
+			// desactivamos el movimiento automaticoa
+			dashIsActive = false;
+
+
+		}
 	}
+	*/
+
+
+
+
 
 
 
 }
+
+}
+
+
