@@ -8,9 +8,12 @@ public class SwitchScript : MonoBehaviour {
 
 	Animator anim;
 	public bool sticks;
+	CameraShake camShake;
+	public float camShakeAmt = 0.2f;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		camShake = GameObject.Find("_GM").GetComponent<CameraShake> ();
 		
 	}
 	
@@ -24,7 +27,9 @@ public class SwitchScript : MonoBehaviour {
 
 		// Solo iniciamos la animacion del la palnaca si el personaje esta dentro del collider
 		// Y si el player presiona la teclaE
-		if(Input.GetKeyDown(KeyCode.E)) {
+		if(Input.GetKey(KeyCode.E)) {
+			
+			camShake.Shake(camShakeAmt, 0.2f);
 			
 			anim.SetBool ("goDown", true);
 

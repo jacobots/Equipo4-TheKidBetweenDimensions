@@ -8,12 +8,12 @@ AnimatorController:
   m_Name: Obstacle1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isBeingAttacked
-    m_Type: 4
-    m_DefaultFloat: 0
+  - m_Name: Health
+    m_Type: 1
+    m_DefaultFloat: 100
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -34,8 +34,8 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isBeingAttacked
+  - m_ConditionMode: 4
+    m_ConditionEvent: Health
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102499307894445468}
@@ -58,9 +58,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isBeingAttacked
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Health
+    m_EventTreshold: 32
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102783404077397762}
   m_Solo: 0
@@ -82,9 +82,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isBeingAttacked
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Health
+    m_EventTreshold: 66
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102621142594778756}
   m_Solo: 0
