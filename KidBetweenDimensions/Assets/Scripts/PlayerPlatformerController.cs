@@ -68,10 +68,10 @@ public class PlayerPlatformerController : PhysicsObject {
 
 		animator.SetBool ("grounded", grounded);
 		animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
+		animator.SetFloat ("velocityY", Mathf.Abs (velocity.y) / maxSpeed);
 		targetVelocity = move * maxSpeed;
 
-		if (Input.GetButtonDown ("Fire1"))
-			inColliders.ForEach (n => n.SendMessage ("Use", SendMessageOptions.DontRequireReceiver));
+
 
 		// Dash
 		  /*if(Input.GetKeyDown(KeyCode.C)) {

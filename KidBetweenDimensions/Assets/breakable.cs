@@ -32,11 +32,12 @@ public class breakable : MonoBehaviour {
 		if (other.tag == "power") {
 			health = (health - 35f);
 			Instantiate (particleEffect, transform.position, Quaternion.identity);
+			camShake.Shake(camShakeAmt, 0.1f);
 
 		}
 
 		if (health < 0f){
-			camShake.Shake(camShakeAmt, 0.2f);
+			camShake.Shake(camShakeAmt, 0.3f);
 		}
 
 

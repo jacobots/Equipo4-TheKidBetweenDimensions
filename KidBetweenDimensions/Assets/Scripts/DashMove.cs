@@ -10,11 +10,13 @@ public class DashMove : MonoBehaviour {
 	public float startDashTime;
 	private int direction;
 	public GameObject dashEffect;
+	Animator anim;
 
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 		dashTime = startDashTime;
 	
 	}
@@ -34,11 +36,7 @@ public class DashMove : MonoBehaviour {
 				Instantiate (dashEffect, transform.position, Quaternion.identity);
 
 
-			} else if (Input.GetKey (KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.C)) {
-				direction = 3;
-			} else if (Input.GetKey (KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.C)) {
-				direction = 4;
-			}
+			} 
 
 		} else {
 			if (dashTime <= 0) {
@@ -51,15 +49,13 @@ public class DashMove : MonoBehaviour {
 
 				if (direction == 1) {
 					rb.velocity = Vector2.left * dashSpeed;
+					anim.SetTrigger ("Dash");
 
 				} else if (direction == 2) {
 					rb.velocity = Vector2.right * dashSpeed;
+					anim.SetTrigger ("Dash");
 		
-				} else if (direction == 3) {
-					rb.velocity = Vector2.up * dashSpeed;
-				} else if (direction == 4) {
-					rb.velocity = Vector2.down * dashSpeed;
-				}
+				} 
 			}
 
 

@@ -1307,6 +1307,10 @@ Prefab:
       propertyPath: camShakeAmt
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1588327238994492, guid: c43d58675601e4778b1e6aedbc22f109, type: 2}
+      propertyPath: m_TagString
+      value: Usable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c43d58675601e4778b1e6aedbc22f109, type: 2}
   m_IsPrefabParent: 0
