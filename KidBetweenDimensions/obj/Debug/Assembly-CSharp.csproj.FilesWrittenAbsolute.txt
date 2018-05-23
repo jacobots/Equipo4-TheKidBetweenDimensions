@@ -44,3 +44,5 @@
 /Users/jacobots/Documents/Repositorio The kid/KidBetweenDimensions/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/jacobots/Documents/Repositorio The kid/KidBetweenDimensions/obj/Debug/Assembly-CSharp.dll
 /Users/jacobots/Documents/Repositorio The kid/KidBetweenDimensions/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/jacobots/Documents/Repositorio The kid/KidBetweenDimensions/Temp/bin/Debug/TextMeshPro-2017.3-Runtime.dll
+/Users/jacobots/Documents/Repositorio The kid/KidBetweenDimensions/Temp/bin/Debug/TextMeshPro-2017.3-Editor.dll

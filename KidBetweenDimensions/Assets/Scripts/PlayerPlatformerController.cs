@@ -8,7 +8,14 @@ public class PlayerPlatformerController : PhysicsObject {
 	private SpriteRenderer spriteRenderer;
 	private bool attack;
 	private Animator animator;
-	List<Collider2D> inColliders=new List<Collider2D>();
+
+
+
+	public float currentHealth;
+	public float MaxHealth; 
+	public float camShakeAmt = 0.1f;
+	CameraShake camShake;
+
 
 	public bool dashIsActive = false;
 	public float dashDistance = 10;
@@ -17,11 +24,16 @@ public class PlayerPlatformerController : PhysicsObject {
 	public float dashEndPosition = 0;
 
 
+
 	// Use this for initialization
 	void Awake () {
+		
 
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		animator = GetComponent<Animator> ();
+		MaxHealth = 100f;
+		currentHealth = MaxHealth;
+	
 		
 	}
 
@@ -32,46 +44,48 @@ public class PlayerPlatformerController : PhysicsObject {
 
 	protected override void ComputeVelocity()
 	{
-		Vector2 move = Vector2.zero;
-
-		move.x = Input.GetAxis ("Horizontal");
-
-		if (Input.GetButtonDown ("Jump") && grounded) {
-			velocity.y = jumpTakeOffSpeed;
-
-		} else if (Input.GetButtonUp ("Jump")) {
-			if (velocity.y > 0)
-				velocity.y = velocity.y * .5f;
-		}
-
-
-
-
-		if (move.x != 0) {
+		
 			
-			if (move.x > 0) {
-				faceDirection = true;
-			} else {
-				faceDirection = false;
+			Vector2 move = Vector2.zero;
+
+			move.x = Input.GetAxis ("Horizontal");
+
+			if (Input.GetButtonDown ("Jump") && grounded) {
+				velocity.y = jumpTakeOffSpeed;
+
+			} else if (Input.GetButtonUp ("Jump")) {
+				if (velocity.y > 0)
+					velocity.y = velocity.y * .5f;
 			}
-		}
 
 
 
-		//bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
 
-		if (faceDirection == true) {
-			spriteRenderer.flipX = false; // !spriteRenderer.flipX;
-		} else {
-			spriteRenderer.flipX = true;
-		}
-
-		animator.SetBool ("grounded", grounded);
-		animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
-		animator.SetFloat ("velocityY", Mathf.Abs (velocity.y) / maxSpeed);
-		targetVelocity = move * maxSpeed;
+			if (move.x != 0) {
+			
+				if (move.x > 0) {
+					faceDirection = true;
+				} else {
+					faceDirection = false;
+				}
+			}
 
 
+
+			//bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
+
+			if (faceDirection == true) {
+				spriteRenderer.flipX = false; // !spriteRenderer.flipX;
+			} else {
+				spriteRenderer.flipX = true;
+			}
+
+			animator.SetBool ("grounded", grounded);
+			animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
+			animator.SetFloat ("velocityY", Mathf.Abs (velocity.y) / maxSpeed);
+			targetVelocity = move * maxSpeed;
+
+		
 
 		// Dash
 		  /*if(Input.GetKeyDown(KeyCode.C)) {
@@ -131,6 +145,48 @@ public class PlayerPlatformerController : PhysicsObject {
 
 
 }
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.tag == "Deadly") {
+			DealDamage (10);
+
+
+		}
+
+	
+
+	}
+
+	void DealDamage(float damageValue)
+	{
+
+		currentHealth -= damageValue;
+
+		animator.SetTrigger ("damage");
+
+
+
+
+
+		if (currentHealth <= 0)
+
+			Die ();
+
+	}
+
+	void Die () {
+		animator.SetTrigger ("die");
+		currentHealth = 0;
+
+	}
+
+
+
+
+
+
+		
+
 
 }
 

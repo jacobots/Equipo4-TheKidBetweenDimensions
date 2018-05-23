@@ -6,6 +6,7 @@ TagManager:
   tags:
   - power
   - Usable
+  - Deadly
   layers:
   - Default
   - TransparentFX
