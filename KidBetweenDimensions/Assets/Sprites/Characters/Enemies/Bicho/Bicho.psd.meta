@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 35b890b0b051149e7b0a7fbda487da49
-timeCreated: 1526713254
+timeCreated: 1527123401
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -236,8 +236,8 @@ TextureImporter:
       name: 6
       rect:
         serializedVersion: 2
-        x: 225
-        y: 210
+        x: 227
+        y: 212
         width: 76
         height: 38
       alignment: 0
@@ -264,8 +264,8 @@ TextureImporter:
       name: 7
       rect:
         serializedVersion: 2
-        x: 338
-        y: 214
+        x: 339
+        y: 215
         width: 76
         height: 38
       alignment: 0
@@ -460,8 +460,8 @@ TextureImporter:
       name: Bicho_25
       rect:
         serializedVersion: 2
-        x: 453
-        y: 240
+        x: 451
+        y: 321
         width: 38
         height: 25
       alignment: 0
@@ -475,7 +475,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 442
-        y: 222
+        y: 219
         width: 76
         height: 38
       alignment: 0
