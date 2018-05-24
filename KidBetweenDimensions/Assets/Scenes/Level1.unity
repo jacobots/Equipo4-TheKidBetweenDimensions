@@ -12163,6 +12163,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 61693541709013046, guid: 815730e491f1d46958ea2c7059325690,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 2.4127383
+      objectReference: {fileID: 0}
+    - target: {fileID: 61693541709013046, guid: 815730e491f1d46958ea2c7059325690,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.4250078
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 815730e491f1d46958ea2c7059325690, type: 2}
   m_IsPrefabParent: 0
@@ -16860,6 +16870,9 @@ GameObject:
   - component: {fileID: 1711886724}
   - component: {fileID: 1711886723}
   - component: {fileID: 1711886722}
+  - component: {fileID: 1711886727}
+  - component: {fileID: 1711886726}
+  - component: {fileID: 1711886725}
   m_Layer: 0
   m_Name: Plataforma Flor_0
   m_TagString: Untagged
@@ -16929,12 +16942,79 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1711886721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 295.65826, y: -5.8025494, z: 0}
+  m_LocalPosition: {x: 281.41, y: -6.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1711886725
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711886721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5419464, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7, y: 4.7}
+    newSize: {x: 7, y: 4.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1426086, y: 4.7}
+  m_EdgeRadius: 0
+--- !u!61 &1711886726
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711886721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.9634552, y: -1.5455079}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7, y: 4.7}
+    newSize: {x: 7, y: 4.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.0730896, y: 1.608984}
+  m_EdgeRadius: 0
+--- !u!95 &1711886727
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711886721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35d7cc22bab76438582844aa04aef375, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1714833989
 GameObject:
   m_ObjectHideFlags: 0
