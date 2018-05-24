@@ -15,7 +15,7 @@ public class dot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetButtonDown ("Fire1")) {
 
 			anim.SetTrigger ("deform");
 

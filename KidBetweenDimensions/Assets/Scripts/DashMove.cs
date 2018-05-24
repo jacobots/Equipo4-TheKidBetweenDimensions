@@ -24,13 +24,13 @@ public class DashMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (direction == 0) {
-			if (Input.GetKey (KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.C)) {
+			if (Input.GetAxisRaw ("Horizontal") < 0 && (Input.GetButtonDown("Fire3"))) {
 				direction = 1;
 				Instantiate (dashEffect, transform.position, Quaternion.identity);
 
 
 
-			} else if (Input.GetKey (KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.C)) {
+			} else if (Input.GetAxisRaw ("Horizontal") > 0 && (Input.GetButtonDown("Fire3"))) {
 				direction = 2;
 
 				Instantiate (dashEffect, transform.position, Quaternion.identity);

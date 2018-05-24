@@ -27,7 +27,7 @@ public class SwitchScript : MonoBehaviour {
 
 		// Solo iniciamos la animacion del la palnaca si el personaje esta dentro del collider
 		// Y si el player presiona la teclaE
-		if(Input.GetKey(KeyCode.E)) {
+		if(Input.GetButtonDown("Fire2")) {
 			
 			camShake.Shake(camShakeAmt, 0.2f);
 			

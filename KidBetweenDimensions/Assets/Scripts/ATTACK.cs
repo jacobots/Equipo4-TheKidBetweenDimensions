@@ -29,7 +29,7 @@ public class ATTACK : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetButtonDown ("Fire1")) {
 
 			animatorPlayer.SetTrigger ("Attack");
 
