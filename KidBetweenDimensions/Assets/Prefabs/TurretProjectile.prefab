@@ -9,56 +9,82 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1234719775780832}
+  m_RootGameObject: {fileID: 1244011118475838}
   m_IsPrefabParent: 1
---- !u!1 &1234719775780832
+--- !u!1 &1244011118475838
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4049766141270952}
-  - component: {fileID: 212857648914855862}
-  - component: {fileID: 114239708368505456}
+  - component: {fileID: 4483466456524102}
+  - component: {fileID: 212370940507643456}
+  - component: {fileID: 114579953386277940}
+  - component: {fileID: 61969660238575040}
   m_Layer: 0
   m_Name: TurretProjectile
-  m_TagString: Untagged
+  m_TagString: power
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4049766141270952
+--- !u!4 &4483466456524102
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1234719775780832}
+  m_GameObject: {fileID: 1244011118475838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 110.65, y: -4.99, z: 0}
+  m_LocalPosition: {x: 888.7815, y: -16.768684, z: 0}
   m_LocalScale: {x: 0.8258579, y: 0.8258579, z: 0.8258579}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114239708368505456
+--- !u!61 &61969660238575040
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244011118475838}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05698192, y: -0.07595016}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2278602, y: 1.1140256}
+  m_EdgeRadius: 0
+--- !u!114 &114579953386277940
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1234719775780832}
+  m_GameObject: {fileID: 1244011118475838}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a228e0b68ca24e908cbc98c03ed6462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!212 &212857648914855862
+--- !u!212 &212370940507643456
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1234719775780832}
+  m_GameObject: {fileID: 1244011118475838}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

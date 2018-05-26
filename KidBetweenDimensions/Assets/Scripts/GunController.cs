@@ -26,7 +26,9 @@ public class GunController : MonoBehaviour {
 			if (shotCounter <= 0) {
 				shotCounter = timeBetweenShots;
 				misil newBullet = Instantiate (bullet, firePoint.position, firePoint.rotation) as misil;
+				newBullet.transform.parent = gameObject.transform;
 				newBullet.speed = bulletSpeed;
+				newBullet.transform.SetParent (null);
 			}
 		} else {
 
