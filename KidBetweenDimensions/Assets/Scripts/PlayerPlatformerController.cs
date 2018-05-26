@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPlatformerController : PhysicsObject {
+	private float kbTime;
+	public float kbSpeed;
 	public float maxSpeed = 7;
 	public float jumpTakeOffSpeed = 7;
 	private SpriteRenderer spriteRenderer;
 	private bool attack;
 	private Animator animator;
+
+	Rigidbody2D myrigidbody2D;
+
+
 
 
 
@@ -22,17 +28,20 @@ public class PlayerPlatformerController : PhysicsObject {
 	public float dashSpeed = 0.2f;
 	public float dashInitPosition = 0;
 	public float dashEndPosition = 0;
+	Rigidbody2D rb;
+	public float jumpBack=0.1f;
 
 
 
 	// Use this for initialization
 	void Awake () {
 		
-
+		rb = GetComponent<Rigidbody2D> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		animator = GetComponent<Animator> ();
 		MaxHealth = 100f;
 		currentHealth = MaxHealth;
+		camShake = GameObject.Find("_GM").GetComponent<CameraShake> ();
 	
 		
 	}
@@ -85,58 +94,6 @@ public class PlayerPlatformerController : PhysicsObject {
 			animator.SetFloat ("velocityY", Mathf.Abs (velocity.y) / maxSpeed);
 			targetVelocity = move * maxSpeed;
 
-		
-
-		// Dash
-		  /*if(Input.GetKeyDown(KeyCode.C)) {
-
-			// Activamos el movimiento automaticoa
-			dashIsActive = true;
-
-			// Guardamos la posicion inicial del dash
-			dashInitPosition = this.gameObject.transform.position.x;
-
-			if (faceDirection == true) {
-
-				// Calculamos la distancia a recorrer automaticamente
-				dashEndPosition = dashInitPosition + dashDistance;
-			} else {
-				dashEndPosition = dashInitPosition - dashDistance;
-			}
-		}
-
-		if(dashIsActive == true) {
-
-			// Hacemos el movimiento continuo del dash mientras no hayamos llegado al final
-			if (this.gameObject.transform.position.x < dashEndPosition) {
-
-				if (faceDirection == true) {
-					this.gameObject.transform.Translate (dashSpeed, 0.0f, 0.0f);
-				} else {
-					this.gameObject.transform.Translate (-dashSpeed, 0.0f, 0.0f);
-				}
-
-			
-			} else {
-
-				// desactivamos el movimiento automaticoa
-				dashIsActive = false;
-
-			}
-		}
-
-	}
-
-
-	void OnCollisonEnter2D() {
-		if(dashIsActive == true) {
-			// desactivamos el movimiento automaticoa
-			dashIsActive = false;
-
-
-		}
-	}
-	*/
 
 
 
@@ -148,11 +105,26 @@ public class PlayerPlatformerController : PhysicsObject {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Deadly") {
+			
 			DealDamage (10);
+			animator.SetTrigger ("damage");
+			camShake.Shake(camShakeAmt, 0.1f);
+
+
+
+		
+		
+
+		
 
 
 		}
 
+		if (other.tag == "Turret") {
+			this.gameObject.SetActive (false);
+			other.gameObject.SetActive (false);
+
+		}
 	
 
 	}
@@ -162,7 +134,8 @@ public class PlayerPlatformerController : PhysicsObject {
 
 		currentHealth -= damageValue;
 
-		animator.SetTrigger ("damage");
+
+
 
 
 
@@ -179,6 +152,10 @@ public class PlayerPlatformerController : PhysicsObject {
 		currentHealth = 0;
 
 	}
+
+
+
+
 
 
 

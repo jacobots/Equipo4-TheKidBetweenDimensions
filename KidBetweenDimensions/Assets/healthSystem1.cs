@@ -17,6 +17,7 @@ public class healthSystem1 : MonoBehaviour {
 		MaxHealth = 100f;
 		currentHealth = MaxHealth;
 		isattacked = false;
+		animator = this.gameObject.GetComponent<Animator> ();
 
 	}
 
@@ -49,7 +50,7 @@ public class healthSystem1 : MonoBehaviour {
 
 		animator.SetTrigger ("damage");
 
-		camShake.Shake (camShakeAmt, 0.1f);
+		// camShake.Shake (camShakeAmt, 0.1f);
 
 
 

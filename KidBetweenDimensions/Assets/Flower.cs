@@ -25,18 +25,25 @@ public class Flower : MonoBehaviour {
 			
 		}
 
+		if (other.gameObject.tag == "Player") {
+			other.transform.parent = transform;
 
+		}
 
-	}
-
-	void OnTriggerStay2D (Collider2D other)
-	{
-		if(other.tag=="player"){
-			transform.SetParent (transform);
 
 
 	}
+		
+
+
+
+
+	void OnTriggerExit2D (Collider2D other) {
+			if(other.gameObject.tag == "Player") {
+				other.transform.parent = null;
+			}
+		}
 
 }
 
-}
+

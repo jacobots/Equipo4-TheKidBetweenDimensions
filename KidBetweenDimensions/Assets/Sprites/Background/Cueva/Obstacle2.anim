@@ -21,13 +21,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 1.65
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.13333334
-        value: 1.65
+        value: 1.46
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -43,13 +37,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 18.94
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.13333334
-        value: 18.94
+        value: 20
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -63,8 +51,6 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9083ff70e509441c0a68a801dad3308c, type: 3}
-    - time: 0.13333334
       value: {fileID: 21300000, guid: 9083ff70e509441c0a68a801dad3308c, type: 3}
     attribute: m_Sprite
     path: 
@@ -100,13 +86,12 @@ AnimationClip:
       isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 9083ff70e509441c0a68a801dad3308c, type: 3}
-    - {fileID: 21300000, guid: 9083ff70e509441c0a68a801dad3308c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.15
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -127,13 +112,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 1.65
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.13333334
-        value: 1.65
+        value: 1.46
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -149,13 +128,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 18.94
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 0.13333334
-        value: 18.94
+        value: 20
         inSlope: 0
         outSlope: 0
         tangentMode: 136

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class breakable : MonoBehaviour {
+public class Breakkk : MonoBehaviour {
+
 	Animator anim;
 	public float health;
 	public GameObject particleEffect;
@@ -11,9 +12,10 @@ public class breakable : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		
 		anim = GetComponent<Animator> ();
 		camShake = GameObject.Find("_GM").GetComponent<CameraShake> ();
+
 		
 	}
 	
@@ -23,27 +25,24 @@ public class breakable : MonoBehaviour {
 		anim.SetFloat ("Health" , health);
 
 
-	
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerEnter2D (Collider2D other){
 
 		if (other.gameObject.tag == "power") {
 			health = (health - 35f);
 			Instantiate (particleEffect, transform.position, Quaternion.identity);
 			camShake.Shake(camShakeAmt, 0.1f);
 
-		}
+		} 
 
 		if (health < 0f){
 			camShake.Shake(camShakeAmt, 0.3f);
 		}
-
-
-
 			
 
-			}
 
+
+	}
 }

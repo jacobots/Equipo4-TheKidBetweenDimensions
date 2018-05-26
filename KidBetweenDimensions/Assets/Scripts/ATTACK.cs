@@ -47,20 +47,18 @@ public class ATTACK : MonoBehaviour {
 			}
 
 		if (isAttacking == true) {
+			GameObject player = GameObject.Find ("Player");
+			GameObject power = GameObject.Find ("Power");
+			power.transform.position = player.transform.position;
 
-			GameObject power = GameObject.Find ("Player/Power");
 			power.GetComponent<BoxCollider2D> ().enabled = true;
 		} else {
 
-			GameObject power = GameObject.Find ("Player/Power");
+			GameObject power = GameObject.Find ("Power");
 			power.GetComponent<BoxCollider2D> ().enabled = false;
 		}
 		}
 
-	void OnGUI()
-	{
-		
-	}
-}
-	
 
+	
+}
