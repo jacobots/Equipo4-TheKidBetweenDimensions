@@ -1432,11 +1432,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4388078403655988, guid: 925f74ad511c049afa154b1f00ff0f66, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.6
+      value: 278.5
       objectReference: {fileID: 0}
     - target: {fileID: 4388078403655988, guid: 925f74ad511c049afa154b1f00ff0f66, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.62
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4388078403655988, guid: 925f74ad511c049afa154b1f00ff0f66, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3298,6 +3298,31 @@ GameObject:
   m_PrefabParentObject: {fileID: 1166423995686348, guid: 3b3511ee958f643b0a12c28b3239944d,
     type: 2}
   m_PrefabInternal: {fileID: 1873786757}
+--- !u!61 &969444408
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969444407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11255783, y: -0.19673991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.220532, y: 3.459949}
+  m_EdgeRadius: 0
 --- !u!1 &989469667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6312,6 +6337,11 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 61074595442935912, guid: 3b3511ee958f643b0a12c28b3239944d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b3511ee958f643b0a12c28b3239944d, type: 2}
   m_IsPrefabParent: 0
@@ -6378,7 +6408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4522516521078666, guid: ee65a6958c65b4dceafc593f9784da01, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -21.8
       objectReference: {fileID: 0}
     - target: {fileID: 4522516521078666, guid: ee65a6958c65b4dceafc593f9784da01, type: 2}
       propertyPath: m_LocalRotation.x
