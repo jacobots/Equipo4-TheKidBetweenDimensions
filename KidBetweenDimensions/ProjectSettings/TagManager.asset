@@ -13,6 +13,11 @@ TagManager:
   - Deadly2
   - fallDetector
   - checkpoint
+  - seems
+  - triangulo
+  - r2
+  - plataformadialogo
+  - not
   layers:
   - Default
   - TransparentFX
