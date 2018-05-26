@@ -10,6 +10,7 @@ TagManager:
   - lever
   - Power
   - turret
+  - Deadly2
   layers:
   - Default
   - TransparentFX

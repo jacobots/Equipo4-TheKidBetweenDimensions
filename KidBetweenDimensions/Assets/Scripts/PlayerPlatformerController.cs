@@ -112,6 +112,14 @@ public class PlayerPlatformerController : PhysicsObject {
 
 		}
 
+		if (other.tag == "Deadly2") {
+
+			DealDamage (15);
+			animator.SetTrigger ("damage");
+			camShake.Shake (camShakeAmt, 0.1f);
+
+		}
+
 
 
 	
