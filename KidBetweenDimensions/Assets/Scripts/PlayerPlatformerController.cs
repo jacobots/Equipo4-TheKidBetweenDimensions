@@ -10,7 +10,7 @@ public class PlayerPlatformerController : PhysicsObject {
 	private SpriteRenderer spriteRenderer;
 	private bool attack;
 	private Animator animator;
-
+	public GameObject Torreta;
 	Rigidbody2D myrigidbody2D;
 
 
@@ -108,25 +108,30 @@ public class PlayerPlatformerController : PhysicsObject {
 			
 			DealDamage (10);
 			animator.SetTrigger ("damage");
-			camShake.Shake(camShakeAmt, 0.1f);
-
-
-
-		
-		
-
-		
-
+			camShake.Shake (camShakeAmt, 0.1f);
 
 		}
 
-		if (other.tag == "Turret") {
-			this.gameObject.SetActive (false);
-			other.gameObject.SetActive (false);
 
-		}
+
+	
+			
+
 	
 
+	}
+
+	void OnTriggerStay2D(Collider2D other){
+
+		if(other.tag == "turret"){
+
+			if(Input.GetButton("Fire2")) {
+				Torreta.SetActive (true);
+				this.gameObject.SetActive (false);
+
+			}
+
+		}
 	}
 
 	void DealDamage(float damageValue)

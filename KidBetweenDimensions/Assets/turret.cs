@@ -6,6 +6,7 @@ public class turret : MonoBehaviour {
 	public float speed;
 	public GunController theGun;
 	Animator anim;
+	public GameObject Player;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,12 @@ public class turret : MonoBehaviour {
 
 		if (Input.GetButtonUp ("Fire1")) {
 			theGun.isFiring = false;
+
+		}
+
+		if (Input.GetButton ("Jump")) {
+			Player.SetActive (true);
+			this.gameObject.SetActive (false);
 
 		}
 
