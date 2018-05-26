@@ -8,6 +8,7 @@ public class armadillo : MonoBehaviour {
 	float delay = 0.6f;
 	public float camShakeAmt = 0.1f;
 	CameraShake camShake;
+	public GameObject particleEffect;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -27,6 +28,8 @@ public class armadillo : MonoBehaviour {
 
 		if (other.tag == "power") {
 			health = (health - 10f);
+			Instantiate (particleEffect, transform.position, Quaternion.identity);
+
 			print ("ColisiónConPower");
 		}
 
