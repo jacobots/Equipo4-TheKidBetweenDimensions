@@ -12,8 +12,9 @@ public class PlayerPlatformerController : PhysicsObject {
 	private Animator animator;
 	public GameObject Torreta;
 	Rigidbody2D myrigidbody2D;
+	public Vector3 respawnPoint;
 
-
+	public GameObject particleEffect;
 
 
 
@@ -120,6 +121,18 @@ public class PlayerPlatformerController : PhysicsObject {
 
 		}
 
+		if (other.tag == "fallDetector") {
+			transform.position = respawnPoint;
+
+
+		}
+
+		if (other.tag == "checkpoint") {
+			respawnPoint = other.transform.position;
+
+
+		}
+
 
 
 	
@@ -162,7 +175,9 @@ public class PlayerPlatformerController : PhysicsObject {
 
 	void Die () {
 		animator.SetTrigger ("die");
-		currentHealth = 0;
+		Instantiate (particleEffect, transform.position, Quaternion.identity);
+		transform.position = respawnPoint;
+		currentHealth = 100;
 
 	}
 

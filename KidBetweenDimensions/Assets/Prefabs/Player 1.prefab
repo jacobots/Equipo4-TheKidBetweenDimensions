@@ -247,6 +247,10 @@ MonoBehaviour:
   kbSpeed: 0
   maxSpeed: 14
   jumpTakeOffSpeed: 25
+  Torreta: {fileID: 0}
+  respawnPoint: {x: 26.3, y: 0, z: -21.8}
+  particleEffect: {fileID: 1751620256189930, guid: 3fba1253bde114865b4cb2c61a5be041,
+    type: 2}
   currentHealth: 0
   MaxHealth: 0
   camShakeAmt: 0.1

@@ -11,6 +11,8 @@ TagManager:
   - Power
   - turret
   - Deadly2
+  - fallDetector
+  - checkpoint
   layers:
   - Default
   - TransparentFX
