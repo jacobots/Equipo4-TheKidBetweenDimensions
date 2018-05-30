@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class boss : MonoBehaviour {
 	public float speed;
 	public Transform[] holes;
 	public GameObject projectile;
 	public Transform[] spots;
-
+	bool isDestroyed;
 	Vector3 playerPos;
 	public bool vulnerable;
 	public float health = 500;
 	public GameObject particleEffect;
 	public GameObject player;
 	Animator anim;
+	float delay = 4;
 	// Use this for initialization
 	void Start () {
 		
@@ -28,6 +30,8 @@ public class boss : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().color = Color.gray;
 			StopCoroutine ("bossie");
 			Instantiate (particleEffect, transform.position, Quaternion.identity);
+			Destroy (gameObject, delay);
+
 		}
 	}
 

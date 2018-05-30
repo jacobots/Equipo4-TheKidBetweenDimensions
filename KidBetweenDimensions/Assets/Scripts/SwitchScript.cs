@@ -35,6 +35,7 @@ public class SwitchScript : MonoBehaviour {
 
 			foreach (DoorTriggr trigger in doorTrig) {
 				trigger.Toggle (true);
+				GetComponent<AudioSource> ().Play();
 			}			
 		}
 
