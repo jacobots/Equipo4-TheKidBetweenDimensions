@@ -34,6 +34,9 @@ public class PlayerPlatformerController : PhysicsObject {
 
 
 
+
+
+
 	// Use this for initialization
 	void Awake () {
 		

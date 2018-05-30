@@ -5,6 +5,10 @@ using UnityEngine;
 public class avispaFllow : MonoBehaviour {
 
 	public float speed;
+	public GameObject particleEffect;
+	public float camShakeAmt = 0.1f;
+	CameraShake camShake;
+
 
 	private Transform target;
 	public GameObject player;

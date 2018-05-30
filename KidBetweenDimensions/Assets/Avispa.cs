@@ -5,7 +5,7 @@ using UnityEngine;
 public class Avispa : MonoBehaviour {
 	Animator anim;
 	public float health = 50;
-	float delay = 0.3f;
+	float delay = 5;
 	CameraShake camShake;
 	public float camShakeAmt = 0.1f;
 
