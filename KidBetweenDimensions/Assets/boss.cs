@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class boss : MonoBehaviour {
@@ -30,7 +31,8 @@ public class boss : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().color = Color.gray;
 			StopCoroutine ("bossie");
 			Instantiate (particleEffect, transform.position, Quaternion.identity);
-			Destroy (gameObject, delay);
+
+			Invoke ("Reiniciar", 4f);
 
 		}
 	}
@@ -117,7 +119,10 @@ public class boss : MonoBehaviour {
 
 
 }
-
+	void Reiniciar (){
+		
+		SceneManager.LoadScene ("Menu");
+	}
 
 
 }
