@@ -40,7 +40,7 @@ public class PlayerPlatformerController : PhysicsObject {
 		rb = GetComponent<Rigidbody2D> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		animator = GetComponent<Animator> ();
-		MaxHealth = 100f;
+		MaxHealth = 200f;
 		currentHealth = MaxHealth;
 		camShake = GameObject.Find("_GM").GetComponent<CameraShake> ();
 	
@@ -177,7 +177,7 @@ public class PlayerPlatformerController : PhysicsObject {
 		animator.SetTrigger ("die");
 		Instantiate (particleEffect, transform.position, Quaternion.identity);
 		transform.position = respawnPoint;
-		currentHealth = 100;
+		currentHealth = MaxHealth;
 
 	}
 
