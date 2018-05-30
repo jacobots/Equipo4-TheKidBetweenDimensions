@@ -40,6 +40,18 @@ public class avispaFllow : MonoBehaviour {
 
 		}
 
+	void OnTriggerEnter2D(Collider2D other){
+
+		if (other.tag == "power") {
+			
+			Instantiate (particleEffect, transform.position, Quaternion.identity);
+
+		
+		}
+	}
+
+
+
 		}
 
 

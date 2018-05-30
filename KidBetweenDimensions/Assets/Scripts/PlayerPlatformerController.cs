@@ -124,6 +124,14 @@ public class PlayerPlatformerController : PhysicsObject {
 
 		}
 
+		if (other.tag == "Deadly3") {
+
+			DealDamage (3);
+			animator.SetTrigger ("damage");
+			camShake.Shake (camShakeAmt, 0.1f);
+
+		}
+
 		if (other.tag == "fallDetector") {
 			transform.position = respawnPoint;
 

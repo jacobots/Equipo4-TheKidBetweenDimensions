@@ -18,6 +18,7 @@ TagManager:
   - r2
   - plataformadialogo
   - not
+  - Deadly3
   layers:
   - Default
   - TransparentFX
