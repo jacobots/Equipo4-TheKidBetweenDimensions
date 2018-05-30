@@ -8,7 +8,7 @@ public class avispaFllow : MonoBehaviour {
 	public GameObject particleEffect;
 	public float camShakeAmt = 0.1f;
 	CameraShake camShake;
-
+	float delay = 2;
 
 	private Transform target;
 	public GameObject player;
@@ -45,7 +45,7 @@ public class avispaFllow : MonoBehaviour {
 		if (other.tag == "power") {
 			
 			Instantiate (particleEffect, transform.position, Quaternion.identity);
-
+			Destroy (gameObject, delay);
 		
 		}
 	}

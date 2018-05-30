@@ -27,13 +27,14 @@ public class DashMove : MonoBehaviour {
 			if (Input.GetAxisRaw ("Horizontal") < 0 && (Input.GetButtonDown("Fire3"))) {
 				direction = 1;
 				Instantiate (dashEffect, transform.position, Quaternion.identity);
-
+				GetComponent<AudioSource> ().Play();
 
 
 			} else if (Input.GetAxisRaw ("Horizontal") > 0 && (Input.GetButtonDown("Fire3"))) {
 				direction = 2;
 
 				Instantiate (dashEffect, transform.position, Quaternion.identity);
+
 
 
 			} 
